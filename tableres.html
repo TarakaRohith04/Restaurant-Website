@@ -1,0 +1,122 @@
+<doctype html>
+    <html>
+
+    <head>
+        <title>Creating a Sign up</title>
+        <style>
+            #register-form {
+                width: 300px;
+                background-color: rgb(152,251,152);
+                padding: 24px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .input-label {
+                margin: 0;
+                margin-bottom: 4px;
+                margin-top: 24px;
+            }
+
+            .input_item {
+                width: 100%;
+            }
+
+            #term_check {
+                margin-top: 12px;
+                margin-bottom: 12px;
+            }
+        </style>
+        <script>
+            function validate() {
+                var name = document.myform.Full_name.value;
+                var mail = document.myform.Email.value;
+                var atposition = mail.indexOf("@");
+                var dotposition = mail.lastIndexOf(".");
+                var phone = document.myform.Phone_no.value;
+                var persons = document.myform.Number_of_persons.value;
+                var check = document.getElementsByName("terms");
+                if (name == "" || name.length < 8) {
+                    alert("Name can't be blank and it should contain atleast 8 characters");
+                    document.myform.Full_name.focus();
+                    return false;
+                }
+                else if (mail == "") {
+                    alert("email can't be blank");
+                    document.myform.Email.focus();
+                    return false;
+                }
+                else if (phone == "") {
+                    alert("phone can't be blank");
+                    document.myform.Phone_no.focus();
+                    return false;
+                }
+                else if (isNaN(phone)) {
+                    alert("Only numbers are accepted in the phone field");
+                    document.myform.Phone_no.focus();
+                    return false;
+                }
+                else if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= mail.length) {
+                    alert("Enter valid email id");
+                    document.myform.Email.focus();
+                    return false;
+                }
+                else if (phone.length < 10) {
+                    alert("Enter 10 digit mobile number");
+                    document.myform.Phone_no.focus();
+                    return false;
+                }
+                else if (persons == "" || persons == '0') {
+                    alert("Please enter how many person will you be with");
+                    document.myform.Number_of_persons.focus();
+                    return false;
+                }
+	else if (check[0].checked == false) {
+                    alert("Please accept terms and conditions");
+                    return false;
+                }
+                else
+                    return true;
+            }  
+        </script>
+
+    <body style="background-color: #FFFFE0">
+        <h1 style="text-align:center;margin-top:5px;font-size:65px;font-style:italic;font-family:Papyrus">Online Table Reservation</h1>
+        <form id="register-form" name="myform" action="Insert.java" onsubmit="return validate()" method="post">
+            <div>
+                <p class="input-label">Full Name:</p>
+                <input class="input_item" type="text" name="Full_name" placeholder="Enter full name"/>
+            </div>
+            <div>
+                <p class="input-label">Email:</p>
+                <input class="input_item" type="email" name="Email" placeholder="Enter mail id"/>
+            </div>
+            <div>
+                <p class="input-label">Phone Number:</p>
+                <input class="input_item" type="textarea" name="Phone_no" placeholder="Enter phone number"/>
+            </div>
+            <div>
+                <p class="input-label">Reservation Date:</p>
+                <input class="input_item" type="Date" name="Date" />
+            </div>
+            <div>
+                <p class="input-label">Reservation Time:</p>
+                <input class="input_item" type="time" name="Time" />
+            </div>
+            <div>
+                <p class="input-label">How many person will you be with?:</p>
+                <input class="input_item" type="textarea" name="Number_of_persons" placeholder="Enter no.of persons"/>
+            </div>
+            <input id="terms_check" type="checkbox" name="terms" value"accept">I
+            agree to accept terms and conditions
+            </div>
+            <div>
+                <input type="submit" name="Register" value="Register" />
+                <input type="reset">
+            </div>
+        </form>
+    </body>
+    </head>
+
+    </html>
+</doctype>

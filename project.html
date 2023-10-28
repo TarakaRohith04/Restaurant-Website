@@ -1,0 +1,67 @@
+<html style="margin:0">
+<style>
+p{
+font-family:sans-serif;
+}
+.w3-xlarge{font-size:30px}
+.w3-large{font-size:22px;color:blue;}
+.w3-display-bottomleft{position:absolute;left:24;bottom:8}
+.box  {
+  background-image: url('background.jpg');
+  height: 100%;
+  width:100%;
+  background-position: center;
+  background-size: cover;
+}
+.box .btn{
+margin-top: 25px;
+margin-left: 25px;
+padding-top: 12px;
+padding-bottom: 12px;
+padding-left: 25px;
+padding-right: 25px;
+background-color:black;
+color:white;
+font-family: sans-serif;
+font-size:20px;
+font-style:italic;
+}
+.marquee{
+margin-left:30%;
+margin-right:30%;
+font-size:25px;
+}
+.blink-one {
+        animation: blinker-one 1.2s linear infinite;
+        text-align:center;
+        margin-top:0%;
+        margin-left:20%;
+        margin-right:20%;
+        margin-bottom:0%;
+}
+@keyframes blinker-one {
+        0% {
+          opacity: 0;
+          background-color:yellow;
+        }
+}
+</style>
+<body>
+<div class = "box">
+<marquee class="marquee" behavior = "alternate" scrollamount="infinite" direction="left" bgcolor="yellow" loop="20" scroldelay="2">Welcome !!</marquee>
+<h1  class="blink-one">Hotel Food'o Clock</h1> 
+<button class = "btn" onclick="window.location.href = 'menu.html'">Menu</button>
+<br>
+<button class = "btn" onclick="window.location.href = 'online1.html'">Place Order</button>
+<br>
+<button class = "btn" onclick="window.location.href = 'tableres.html'">Online Table Reservation</button>
+<br>
+<div class="w3-display-bottomleft w3-container">
+    <p class="w3-xlarge">Timings:</p>
+    <p class="w3-large">Monday - Friday 17:00-23:00</p>
+    <p class="w3-large">Saturday, Sunday 10:00-23:00</p>
+    <p class="w3-large">Benz Cricle, Vijayawada</p>
+  </div>
+</div>
+</body>
+</html>

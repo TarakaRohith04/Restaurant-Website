@@ -1,0 +1,224 @@
+<html style="background-color:#F5F5DC">
+<script>
+    function count() {
+        var l = document.getElementsByTagName("input");
+        var c = 0;
+        var selectedItems = [];
+        var finalOrder = "";
+        var total="";
+        for (var i = 0; i < l.length; i++) {
+            if (l[i].checked == true) {
+                c += parseInt(l[i].name);
+                selectedItems.push(l[i]);
+            }
+        }
+        for (var i = 0; i < selectedItems.length; i++) {
+            finalOrder += "<p>" + selectedItems[i].value + " - " + selectedItems[i].name + "/-"+"</p>";
+        }
+        debugger;
+        finalOrder += "<b>Total" + " - " + c + "/-"+"</b>"
+        parent.frames[2].h1.innerHTML = finalOrder;
+        //parent.frames[2].h1.innerHTML = total;
+        // window.alert("Total Amount : " + c);
+        if (c != 0)
+            return true;
+        return false;
+    }
+</script>
+<div class="center">
+    <table border="2" cellspacing="5" cellpadding="5" width="100%">
+        <tr>
+            <th colspan="2">Starters</th>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <th>Price(in .Rs)</th>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Water" name="20">Water</td>
+            <td>20/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Juice" name="50">Juice</td>
+            <td>50/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Lime Squash" name="60">Lime Squash</td>
+            <td>60/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Tea" name="25">Tea</td>
+            <td>25/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Coffee" name="30">Coffee</td>
+            <td>30/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Milk Shake" name="75">Milk Shake</td>
+            <td>75/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Smoothie" name="80">Smoothie</td>
+            <td>80/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Fruit Punch" name="90">Fruit Punch</td>
+            <td>90/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Carbonated Water" name="30">Carbonated Water</td>
+            <td>30/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Coconut Lemonade" name="120">Coconut Lemonade</td>
+            <td>120/-</td>
+        </tr>
+        <tr>
+            <th colspan="2">Drinks</th>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <th>Price(in .Rs)</th>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Soup" name="145">Soup</td>
+            <td>145/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Crispy Corn" name="170">Crispy Corn</td>
+            <td>170/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Shangrilla" name="150">Shangrilla</td>
+            <td>150/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Manchuria" name="140">Manchuria</td>
+            <td>140/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Baby Corn" name="180">Baby Corn</td>
+            <td>180/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Crispy Veg" name="165">Crispy Veg</td>
+            <td>165/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Palak Rolls" name="140">Palak Rolls</td>
+            <td>140/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Spring Rolls" name="175">Spring Rolls</td>
+            <td>175/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Chilly Paneer" name="180">Chilly Paneer</td>
+            <td>180/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Mushroom 65" name="170">Mushroom 65</td>
+            <td>170/-</td>
+        </tr>
+        <tr>
+            <th colspan="2">Dishes</th>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <th>Price(in .Rs)</th>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Pizza" name="250">Pizza</td>
+            <td>250/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Pasta" name="220">Pasta</td>
+            <td>220/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Paneer" name="130">Paneer Tikka</td>
+            <td>130/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Handi Paneer" name="160">Handi Paneer</td>
+            <td>160/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Mix Veg" name="120">Mix Veg</td>
+            <td>120/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Paswari Tikka" name="150">Paswari Tikka</td>
+            <td>150/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Dal Fry" name="100">Dal Fry</td>
+            <td>100/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Malai Kofta" name="160">Malai Kofta</td>
+            <td>160/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Tawa Roti" name="30">Tawa Roti</td>
+            <td>30/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Stuffed Roti" name="50">Stuffed Roti</td>
+            <td>50/-</td>
+        </tr>
+        <tr>
+            <th colspan="2">Salads</th>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <th>Price(in .Rs)</th>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Veggie Salad" name="100">Veggie Salad</td>
+            <td>100/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Corn Salad" name="110">Corn Salad</td>
+            <td>110/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Sprouts Salad" name="130">Sprouts Salad</td>
+            <td>130/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Broccoli Salad" name="160">Broccoli Salad</td>
+            <td>160/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Paneer Salad" name="150">Paneer Salad</td>
+            <td>150/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Milk Shake" name="75">Milk Shake</td>
+            <td>75/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Vanilla Tub" name="120">Vanilla Tub</td>
+            <td>120/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Strawberry" name="120">Strawberry</td>
+            <td>120/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Butterscotch" name="140">Butterscotch</td>
+            <td>140/-</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Coconut Salad" name="120">Coconut Salad</td>
+            <td>120/-</td>
+        </tr>
+    </table>
+    <form name="myform" onsubmit="return count()">
+        <button value="Proceed" style="margin-top:5px;margin-left: 45%;">Proceed</button>
+    </form>
+</div>
+
+</html>
